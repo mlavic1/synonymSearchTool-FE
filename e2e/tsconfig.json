@@ -6,8 +6,11 @@
     "module": "commonjs",
     "target": "es2018",
     "types": [
-      "jasmine",
+      "cypress",
       "node"
     ]
-  }
+  },
+  "include": [
+    "**/*.ts"
+  ]
 }

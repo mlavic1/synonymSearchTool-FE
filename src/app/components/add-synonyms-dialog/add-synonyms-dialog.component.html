@@ -1,0 +1,51 @@
+<div class="add-synonyms-dialog">
+  <div class="add-synonyms-dialog_header">
+    <div class="add-synonyms-dialog_header-title-wrapper">
+      <p class="add-synonyms-dialog_header-title">Add</p>
+      <img matTooltip="{{infoAboutAddingSynonyms}}" src="assets/icons/about.svg" class="synonym-dictionary-search_add-icon" alt="about icon">
+    </div>
+    <div class="add-synonyms-dialog_header-button-wrapper">
+      <span>Add new word with synonyms</span>
+      <button
+          class="add-synonyms-dialog_header-button"
+          mat-mini-fab
+          color="white"
+          (click)="addNewWordSynonymPair()">
+        <img src="assets/icons/add.svg" class="synonym-dictionary-search_add-icon" alt="add icon">
+      </button>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="add-synonyms-dialog_content">
+    <form [formGroup]="formGroup" class="add-synonyms-dialog_content-form">
+      <div class="add-synonyms-dialog_content-form-word" formArrayName="words">
+        <div *ngFor="let item of getWords().controls; let pointIndex=index" [formGroupName]="pointIndex">
+          <mat-form-field>
+            <mat-label>Word</mat-label>
+            <input data-test-dialog-word-input
+                   matInput
+                   autocomplete="off"
+                   formControlName="word">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="add-synonyms-dialog_content-form-word" formArrayName="synonyms">
+        <div *ngFor="let item of getSynonyms().controls; let pointIndex=index" [formGroupName]="pointIndex">
+          <mat-form-field>
+            <mat-label>Synonyms</mat-label>
+            <input data-test-dialog-synonym-input
+                   matInput
+                   autocomplete="off"
+                   formControlName="synonyms">
+            <mat-hint>Divide synonyms with comma</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="add-synonyms-dialog_footer">
+    <button (click)="cancel()" mat-raised-button>CANCEL</button>
+    <button data-test-dialog-add-button (click)="addSynonyms()" mat-raised-button color="primary">ADD</button>
+  </div>
+</div>

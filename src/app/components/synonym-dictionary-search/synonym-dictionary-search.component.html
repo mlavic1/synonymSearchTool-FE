@@ -1,0 +1,28 @@
+<div class="synonym-dictionary-search">
+  <div class="synonym-dictionary-search_header-wrapper">
+    <div class="synonym-dictionary-search_header-title">
+      synonym[dict]
+    </div>
+    <div class="synonym-dictionary-search_add">
+      <span class="synonym-dictionary-search_add-button-text">Add new synonyms</span>
+      <button data-test-add-new-words-button (click)="openDialog()" mat-mini-fab color="white">
+        <img src="assets/icons/add.svg" class="synonym-dictionary-search_add-icon" alt="add icon">
+      </button>
+    </div>
+  </div>
+  <div class="synonym-dictionary-search_wrapper">
+    <div class="synonym-dictionary-search_lookup">
+      <mat-form-field appearance="outline">
+        <input data-test-search-input
+            class="synonym-dictionary-search_lookup-input"
+               matInput
+               autocomplete="off"
+               [formControl]="valueControl"
+               [placeholder]="placeholder"
+               (keydown.enter)="searchForSynonyms()">
+      </mat-form-field>
+      <img data-test-search-input-button class="synonym-dictionary-search_lookup-icon" src="assets/icons/search.svg" alt="Search icon"
+           (click)="searchForSynonyms()">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+.synonym-dictionary-search {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgb(91, 59, 124), rgb(172, 127, 217), rgb(221, 157, 236));
+
+  &_header-wrapper {
+    display: flex;
+    width: 100%;
+    height: 7rem;
+  }
+
+  &_header-title {
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-family: "Book Antiqua", serif;
+    color: white;
+    padding-left: 1rem;
+    flex: 1;
+  }
+
+  &_add {
+    align-self: center;
+    padding: 1rem;
+  }
+
+  &_add-button-text {
+    margin-right: 1rem;
+    font-family: Roboto, serif;
+    color: white;
+  }
+
+  &_add-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  &_wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &_lookup {
+    display: flex;
+    align-self: center;
+    width: 50%;
+
+    .mat-form-field {
+      width: 100%;
+      margin-right: 0.5rem;
+
+      .mat-form-field-outline {
+        background-color: #fff;
+      }
+      .mat-form-field-infix {
+        padding: 0.5em 0 1em 0 !important;
+      }
+    }
+
+  }
+
+  &_lookup-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+    margin-top: 0.7rem;
+  }
+}

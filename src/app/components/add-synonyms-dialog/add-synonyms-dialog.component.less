@@ -1,0 +1,54 @@
+.add-synonyms-dialog {
+  width: 35rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+
+  &_header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  &_header-title {
+    flex: 1;
+    font-size: 1.5rem;
+  }
+
+  &_header-title-wrapper {
+    display: flex;
+  }
+
+  &_header-button-wrapper {
+    text-align: end;
+  }
+
+  &_header-button {
+    margin-left: 0.5rem;
+  }
+
+  &_content {
+    flex: 1;
+    padding: 1rem 2rem;
+    overflow-y: auto;
+  }
+
+  &_content-form {
+    display: flex;
+  }
+
+  &_content-form-word {
+    margin-right: 1rem;
+  }
+
+  &_footer {
+    height: 3rem;
+    padding-top: 0.5rem;
+    text-align: end;
+    padding-right: 1.5rem;
+    background-image: linear-gradient(to bottom, rgb(230, 224, 234), rgb(255, 255, 255));
+  }
+}
+.mat-dialog-container {
+  padding: 0 !important;
+}

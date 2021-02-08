@@ -1,0 +1,22 @@
+<div class="synonym-dictionary-content">
+  <div *ngIf="currentSearchedWord" class="synonym-dictionary-content_word">
+    <p class="synonym-dictionary-content_text">You searched for word:</p>
+    <p class="synonym-dictionary-content_text-word">- {{currentSearchedWord}}</p>
+    <mat-divider></mat-divider>
+  </div>
+  <div *ngIf="currentSynonyms.length > 0; else noSynonyms" class="synonym-dictionary-content_synonyms">
+    <p class="synonym-dictionary-content_text">Synonyms for this word are:</p>
+    <div class="synonym-dictionary-content_synonym-chips">
+      <mat-chip-list class="synonym-dictionary-content_chip-list" [selectable]="false">
+        <div data-test-synonym-result *ngFor="let synonym of currentSynonyms" class="synonym-dictionary-content_chip-list-wrapper">
+          <mat-chip>{{synonym}}</mat-chip>
+        </div>
+      </mat-chip-list>
+    </div>
+  </div>
+  <ng-template #noSynonyms>
+    <div class="synonym-dictionary-content_synonyms">
+      <p class="synonym-dictionary-content_text">There are no synonyms for this word.</p>
+    </div>
+  </ng-template>
+</div>

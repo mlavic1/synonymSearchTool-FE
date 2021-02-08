@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "viewportWidth": 1200,
+  "viewportHeight": 800,
+  "fileServerFolder": ".",
+  "integrationFolder": "./src/integration",
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": false,
+  "video": true,
+  "videosFolder": "../../dist/cypress/{your-project}-e2e/videos",
+  "screenshotsFolder": "../../dist/cypress/{your-project}-e2e/screenshots",
+  "chromeWebSecurity": false
+}

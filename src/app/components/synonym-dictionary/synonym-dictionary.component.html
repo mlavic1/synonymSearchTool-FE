@@ -1,0 +1,10 @@
+<div data-test-synonym-dictionary class="synonym-dictionary">
+  <app-synonym-dictionary-search (searchForSynonymsEmitter)="getSynonyms($event)"
+                                 (addNewWorSynonyms)="addSynonyms($event)"></app-synonym-dictionary-search>
+
+  <app-synonym-dictionary-content
+      class="synonym-dictionary_content"
+      [currentSearchedWord]="currentWord"
+      [currentSynonyms]="synonyms$ | async">
+  </app-synonym-dictionary-content>
+</div>
