@@ -2,9 +2,9 @@
   "name": "reeinvent-fe",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng build --prod && npm install -g http-server-spa",
     "ng": "ng",
-    "start": "node server.js",
+    "start": "http-server-spa dist/reeinvent-fe index.html $PORT",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
