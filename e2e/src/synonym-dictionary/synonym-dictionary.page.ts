@@ -20,7 +20,7 @@ export class SynonymDictionaryPage {
       cy.get(SynonymDictionarySelect.dialogSynonymInput).type(synonym);
     }
 
-    cy.get(SynonymDictionarySelect.dialogAddButton).click();
+    cy.get(SynonymDictionarySelect.dialogAddButton).click().wait(300);
   }
 
   public static assertSnackbarVisibleWithText(text: string): void {
