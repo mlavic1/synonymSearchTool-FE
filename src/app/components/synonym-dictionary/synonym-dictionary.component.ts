@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,8 @@ import { WordSynonymsPair } from '../../model/word-synonym-pair';
 @Component({
              selector: 'app-synonym-dictionary',
              templateUrl: './synonym-dictionary.component.html',
-             styleUrls: ['./synonym-dictionary.component.less']
+             styleUrls: ['./synonym-dictionary.component.less'],
+             encapsulation: ViewEncapsulation.None
            })
 export class SynonymDictionaryComponent {
 

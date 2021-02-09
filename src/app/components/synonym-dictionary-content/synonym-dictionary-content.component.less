@@ -3,12 +3,12 @@
   flex-direction: column;
   padding: 4rem;
 
-  .synonym-dictionary-content_text {
+  &_text {
     font-family: "Book Antiqua", serif;
     font-size: 2rem;
   }
 
-  .synonym-dictionary-content_text-word {
+  &_text-word {
     font-size: 1.3rem;
     font-style: italic;
   }
@@ -32,5 +32,17 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 20rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .synonym-dictionary-content {
+    &_text {
+      font-size: 1.2rem;
+    }
+
+    &_chip-name {
+      max-width: 10rem;
+    }
   }
 }

@@ -52,3 +52,25 @@
 .mat-dialog-container {
   padding: 0 !important;
 }
+
+@media (max-width: 769px) {
+  .add-synonyms-dialog {
+    width: 18rem;
+    height: 30rem;
+
+    .mat-form-field-wrapper {
+      width: 50%;
+    }
+
+    &_content-form-word {
+      width: 50%;
+    }
+
+    &_content {
+      overflow-x: hidden;
+      .mat-form-field {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
