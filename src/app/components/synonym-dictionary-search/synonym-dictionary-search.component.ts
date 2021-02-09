@@ -16,8 +16,6 @@ export class SynonymDictionarySearchComponent {
   @Output() public readonly addNewWorSynonyms = new EventEmitter<WordSynonymsPair[]>();
 
   public valueControl = new FormControl('');
-  public placeholder = 'Search for synonyms';
-  public iconName = 'assets/icons/add.svg';
 
   constructor(private changeDetector: ChangeDetectorRef, private dialog: MatDialog) { }
 

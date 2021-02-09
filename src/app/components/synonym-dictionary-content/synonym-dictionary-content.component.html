@@ -8,8 +8,10 @@
     <p class="synonym-dictionary-content_text">Synonyms for this word are:</p>
     <div class="synonym-dictionary-content_synonym-chips">
       <mat-chip-list class="synonym-dictionary-content_chip-list" [selectable]="false">
-        <div data-test-synonym-result *ngFor="let synonym of currentSynonyms" class="synonym-dictionary-content_chip-list-wrapper">
-          <mat-chip>{{synonym}}</mat-chip>
+        <div data-test-synonym-result *ngFor="let synonym of currentSynonyms">
+          <mat-chip matTooltip="{{synonym}}" matTooltipClass="synonym-dictionary-content_chip-tooltip">
+            <span class="synonym-dictionary-content_chip-name">{{synonym}}</span>
+          </mat-chip>
         </div>
       </mat-chip-list>
     </div>

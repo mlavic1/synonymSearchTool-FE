@@ -21,6 +21,7 @@ export class AddSynonymsDialogComponent implements OnInit {
   }
 
   public ngOnInit(): void {
+    // Form group init as form builder array
     this.formGroup = this.fb.group({
                                      words: this.fb.array([this.fb.group({ word: '' })]),
                                      synonyms: this.fb.array([this.fb.group({ synonyms: '' })])
@@ -36,12 +37,14 @@ export class AddSynonymsDialogComponent implements OnInit {
   }
 
   public addNewWordSynonymPair(): void {
+    // Dynamically add new form group
     this.getWords().push(this.fb.group({ word: '' }));
     this.getSynonyms().push(this.fb.group({ synonyms: '' }));
 
   }
 
   public addSynonyms(): void {
+    // close dialog with word/synonym pairs as dialog result
     this.dialogRef.close(this.getWordSynonymPairs());
   }
 
@@ -50,6 +53,7 @@ export class AddSynonymsDialogComponent implements OnInit {
   }
 
   private getWordSynonymPairs(): WordSynonymsPair[] {
+    // Logic for mapping form values to WordSynonymPair array
     const wordSynonymPairs: WordSynonymsPair[] = [];
 
     for (const index in this.formGroup.value.words) {
@@ -60,7 +64,7 @@ export class AddSynonymsDialogComponent implements OnInit {
             synonyms: this.formGroup.value.synonyms[index].synonyms.split(',')
           });
       } else {
-        this.snackbar.open('Some of word/synonym pair fields are empty', 'Close', {
+        this.snackbar.open('Some of word/synonym pair fields are empty', null, {
           duration: 3000,
           horizontalPosition: 'start',
           verticalPosition: 'bottom',

@@ -17,8 +17,8 @@
             class="synonym-dictionary-search_lookup-input"
                matInput
                autocomplete="off"
+               placeholder="Search for synonyms"
                [formControl]="valueControl"
-               [placeholder]="placeholder"
                (keydown.enter)="searchForSynonyms()">
       </mat-form-field>
       <img data-test-search-input-button class="synonym-dictionary-search_lookup-icon" src="assets/icons/search.svg" alt="Search icon"

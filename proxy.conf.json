@@ -1,8 +1,0 @@
-{
-  "/synonym/*": {
-    "target": "https://synonym-dictionary.herokuapp.com",
-    "secure": false,
-    "changeOrigin": true,
-    "logLevel": "debug"
-  }
-}

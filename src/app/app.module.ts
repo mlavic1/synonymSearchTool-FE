@@ -31,18 +31,18 @@ import { AddSynonymsDialogComponent } from './components/add-synonyms-dialog/add
             imports: [
               BrowserModule,
               BrowserAnimationsModule,
-              RouterModule,
+              HttpClientModule,
               MatTabsModule,
               MatIconModule,
               MatInputModule,
-              ReactiveFormsModule,
-              HttpClientModule,
               MatButtonModule,
               MatChipsModule,
               MatDividerModule,
               MatDialogModule,
               MatTooltipModule,
-              MatSnackBarModule
+              MatSnackBarModule,
+              RouterModule,
+              ReactiveFormsModule
             ],
             providers: [],
             bootstrap: [AppComponent]
