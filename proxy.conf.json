@@ -1,6 +1,6 @@
 {
   "/synonym/*": {
-    "target": "http://localhost:8080",
+    "target": "https://synonym-dictionary.herokuapp.com",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
