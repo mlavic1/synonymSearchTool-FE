@@ -26,10 +26,8 @@ export class SynonymDictionaryComponent implements OnInit {
   }
 
   public addSynonyms(wordSynonymsPair: WordSynonymsPair[]): void {
-    this.synonymDictionaryService.addSynonyms(wordSynonymsPair).subscribe(result => {
-      if (result) {
-        this.showSnackbar('Synonyms successfully added');
-      }
+    this.synonymDictionaryService.addSynonyms(wordSynonymsPair).subscribe(() => {
+      this.showSnackbar('Synonyms successfully added');
     }, () => {
       this.showSnackbar('Oops! Something went wrong!');
     });
